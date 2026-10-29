@@ -11,3 +11,6 @@ Phase 0 (this) - discovery, docs, decisions. Exit: decisions answered (done, see
 **Phase 7 - Analytics & SEO tools**: GTM + GA4 + Consent Mode v2, Data API snapshots, dashboard, SEO audit job, AEO checks.
 **Phase 8 - Hardening & launch**: e2e suite, load/perf, security review, backups/restore drill, runbooks, content entry, launch.
 **Phase 9 (later) - Client portal.**
+
+## Status note: inquiry form
+The contact form is built (validation, Turnstile verification, honeypot, in-memory rate limit). Saving is a development-only file store; production reports "not accepted yet" until the database module exists. Still to build: Postgres persistence, lead record creation, notification email through SMTP2GO, database-backed rate limiting, CSP allowance for challenges.cloudflare.com.

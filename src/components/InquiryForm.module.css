@@ -1,0 +1,141 @@
+.form {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 48rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-6);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.req {
+  color: var(--color-ink-muted);
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 3rem;
+  padding: var(--space-3) 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-hairline-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 1.125rem;
+  caret-color: var(--color-code-signal);
+}
+
+.input::placeholder {
+  color: var(--color-ink-muted);
+  opacity: 1;
+}
+
+.input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.input[aria-invalid="true"] {
+  border-bottom-color: var(--color-code-hazard);
+  border-bottom-width: 2px;
+}
+
+.textarea {
+  min-height: 9rem;
+  resize: vertical;
+  border: 1px solid var(--color-hairline-strong);
+  padding: var(--space-3);
+}
+
+.error,
+.summary {
+  color: var(--color-code-hazard);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.summary {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-code-hazard);
+}
+
+.trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.check {
+  min-height: 4.0625rem;
+}
+
+.submit {
+  justify-self: start;
+  min-height: 3rem;
+  padding: var(--space-3) var(--space-6);
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-code-hazard);
+  color: var(--color-on-code);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.submit:hover:not(:disabled),
+.submit:focus-visible {
+  background: var(--color-ink);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.done {
+  max-width: 48rem;
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-hairline-strong);
+  border-bottom: 1px solid var(--color-hairline-strong);
+}
+
+.doneText {
+  font-size: var(--text-lead);
+  line-height: 1.3;
+}
+
+.doneText:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 6px;
+}
+
+@media (max-width: 40rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
