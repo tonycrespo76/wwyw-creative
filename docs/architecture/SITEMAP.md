@@ -20,3 +20,6 @@ All pages are CMS pages built from registry blocks. Copy below is structural onl
 | `/portal/*` | Reserved, Phase 2 | Not built or linked |
 
 Non-public: `/login`, `/login/verify`, `/login/mfa`, `/admin/**` (noindex, disallowed in robots).
+
+## Built so far (catalogue addresses)
+001 `/` home, 100 `/services`, 101-108 `/services/[slug]`, 200 `/about` (standards 210, people 220 reserved), 300 `/work` (301 reserved), 900 `/contact` (holding page, no form yet). Typing a three-digit address jumps to that page.

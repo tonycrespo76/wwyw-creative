@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { CATALOGUE } from "@/lib/catalogue";
+import { ADDRESSES, CATALOGUE } from "@/lib/catalogue";
 import styles from "./CatalogueNav.module.css";
 
 // The index row. Typing a three-digit address anywhere on the page jumps to it.
@@ -25,7 +25,7 @@ export function CatalogueNav() {
       timer.current = setTimeout(() => setBuffer(""), 1500);
 
       if (next.length === 3) {
-        const entry = CATALOGUE.find((e) => e.code === next);
+        const entry = ADDRESSES.find((e) => e.code === next);
         if (entry) {
           router.push(entry.href);
           setBuffer("");
