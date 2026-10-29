@@ -70,3 +70,9 @@
     grid-column: 1 / -1;
   }
 }
+
+@media (pointer: coarse) {
+  .hint {
+    display: none;
+  }
+}

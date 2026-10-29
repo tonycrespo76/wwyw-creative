@@ -3,7 +3,7 @@ import Link from "next/link";
 import "@fontsource-variable/archivo/wdth.css";
 import "@/styles/globals.css";
 import { MobileMenu } from "@/components/MobileMenu";
-import { CatalogueNav } from "@/components/CatalogueNav";
+import { FooterIndex } from "@/components/FooterIndex";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         {children}
         <footer className={styles.footer}>
-          <CatalogueNav />
+          <FooterIndex />
           <p className={styles.legal}>WWYW. wwyw.io</p>
         </footer>
       </body>

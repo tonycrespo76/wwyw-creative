@@ -15,9 +15,9 @@ export default function Services() {
           The people who design it also build it. Every entry is delivered by the same team, start to finish.
         </p>
         <ol className={shared.entries}>
-          {SERVICES.map((s) => (
+          {SERVICES.map((s, i) => (
             <li key={s.code}>
-              <Link href={`/services/${s.slug}`} className={shared.entry}>
+              <Link href={`/services/${s.slug}`} className={shared.entry} data-tone={i % 3}>
                 <span className={shared.entryCode}>{s.code}</span>
                 <span className={shared.entryName}>{s.name}</span>
                 <span className={shared.entryLine}>{s.line}</span>

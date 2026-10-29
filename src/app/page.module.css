@@ -68,15 +68,63 @@
   letter-spacing: 0.06em;
 }
 
-.close {
-  display: grid;
-  gap: var(--space-5);
+.index {
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--color-hairline-strong);
 }
 
-.closeTitle {
-  font-size: var(--text-display);
+.indexRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-hairline);
+  text-decoration: none;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+    padding var(--dur-med) var(--ease-out);
+}
+
+.indexCode {
+  min-width: 6.5rem;
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
   font-weight: 800;
   font-stretch: 125%;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.indexName {
+  font-size: clamp(1.125rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+}
+
+/* The active entry takes a code colour and slides in from the margin. */
+.indexRow:hover,
+.indexRow:focus-visible {
+  padding-left: var(--space-5);
+  background: var(--color-code-hazard);
+  color: var(--color-on-code);
+}
+
+.indexRow[data-tone="1"]:hover,
+.indexRow[data-tone="1"]:focus-visible {
+  background: var(--color-code-cobalt);
+  color: var(--color-ink);
+}
+
+.indexRow[data-tone="2"]:hover,
+.indexRow[data-tone="2"]:focus-visible {
+  background: var(--color-code-signal);
+  color: var(--color-on-code);
+}
+
+@media (max-width: 30rem) {
+  .action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  .indexCode {
+    min-width: 4.5rem;
+  }
 }

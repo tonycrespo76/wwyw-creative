@@ -27,23 +27,28 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <Link className={shared.crumb} href="/services">
           Back to 100 Services
         </Link>
+        <span className={shared.numeral} aria-hidden="true">
+          {service.code}
+        </span>
         <h1 className={shared.heading} id="t">
-          {service.name} <span className={shared.headingCode}>{service.code}</span>
+          {service.name}
         </h1>
-        <p className={shared.intro}>{service.line}</p>
-        <div className={shared.body}>
-          <p>
-            Design and engineering sit in one team, so what is designed is what gets built, with no hand-off
-            between the two.
-          </p>
-          <p>The detailed scope for this service is being written and will be published here.</p>
+        <div style={{ marginTop: "var(--space-5)" }}>
+          <CodeStrip text={service.name} />
         </div>
-        <Link href="/contact" className={shared.cta} style={{ display: "inline-flex", alignItems: "center", gap: "1rem", textDecoration: "none" }}>
-          <CodeStrip text="Start a project" />
-          <span style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        <p className={shared.intro}>{service.line}</p>
+        <ol className={shared.entries}>
+          <li className={`${shared.entry} ${shared.reserved}`}>
+            <span className={shared.entryCode}>{service.code}.1</span>
+            <span className={shared.entryName}>Scope</span>
+            <span className={shared.entryLine}>Placeholder slot. The detailed scope will be catalogued here.</span>
+          </li>
+        </ol>
+        <p className={shared.cta}>
+          <Link href="/contact" className={shared.textLink}>
             Start a project
-          </span>
-        </Link>
+          </Link>
+        </p>
       </section>
     </main>
   );
