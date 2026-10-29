@@ -1,0 +1,32 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--gutter);
+}
+
+.title {
+  font-size: var(--text-display);
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  font-size: var(--text-lead);
+}
+
+.note {
+  max-width: 55ch;
+  color: var(--color-ink-muted);
+}
+
+.back {
+  width: fit-content;
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

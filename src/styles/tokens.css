@@ -1,0 +1,36 @@
+/* Public surface tokens. Provisional palette; editable via the token editor later. */
+:root {
+  --font-sans: "Archivo Variable", "Archivo", system-ui, sans-serif;
+
+  --color-ground: #0b0b0c;
+  --color-ink: #f4f4f1;
+  --color-ink-muted: #a9a9a4;
+  --color-hairline: rgb(244 244 241 / 0.28);
+  --color-hairline-strong: rgb(244 244 241 / 0.85);
+  --color-code-hazard: #ff5a1f;
+  --color-code-cobalt: #2b4bff;
+  --color-code-signal: #e7d733;
+  --color-on-code: #0b0b0c;
+  --color-focus: #e7d733;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+  --space-8: 7rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --edge: 2.75rem;
+
+  --text-label: 0.75rem;
+  --text-body: 1.0625rem;
+  --text-lead: clamp(1.25rem, 2.2vw, 1.75rem);
+  --text-display: clamp(3.25rem, 11vw, 6rem);
+  --text-heading: clamp(2rem, 5.5vw, 3.75rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-med: 420ms;
+}
