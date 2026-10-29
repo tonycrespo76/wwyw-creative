@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "@fontsource-variable/archivo/wdth.css";
 import "@/styles/globals.css";
+import { MobileMenu } from "@/components/MobileMenu";
 import { CatalogueNav } from "@/components/CatalogueNav";
 import styles from "./layout.module.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/work">Work</Link>
             <Link href="/contact">Contact</Link>
           </nav>
+          <MobileMenu />
         </header>
         {children}
         <footer className={styles.footer}>

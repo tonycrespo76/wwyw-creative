@@ -29,6 +29,14 @@
   transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-med) var(--ease-out);
 }
 
+@media (max-width: 40rem) {
+  .pill {
+    right: calc(var(--gutter) + 3.5rem);
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.875rem;
+  }
+}
+
 .pill:hover,
 .pill:focus-visible {
   background: var(--color-ink);
